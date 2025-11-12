@@ -1,0 +1,8 @@
+title: Sarus Suite
+description: Organization site for Sarus Suite
+url: https://sarus-suite.github.io
+
+theme: minima
+
+permalink: /:title/
+
