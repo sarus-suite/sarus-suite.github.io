@@ -92,6 +92,11 @@ com.pyxis.entrypoint_log = "true"
 
 
 
+## Architecture (high level)
+
+![sarus-suite architecture overview](/assets/sarus-suite-architecture.png)
+
+
 ---
 
 ## Contribute & community
