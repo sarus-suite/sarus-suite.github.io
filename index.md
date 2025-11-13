@@ -70,7 +70,7 @@ com.pyxis.pytorch_remap_vars = "true"
 com.pyxis.entrypoint_log = "true"
 ```
 
-> The EDF is parsed by **raster** and consumed by **sarusctl/skybox**; admins can update runtime backends without changing this file.
+> Example EDF file of an ML application implemented with the transformers library that is able to leverage an HPC system using the Sarus-suite.
 
 ---
 
