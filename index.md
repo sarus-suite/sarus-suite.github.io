@@ -65,8 +65,6 @@ com.hooks.cxi.enabled = "true"
 com.hooks.aws_ofi_nccl.enabled = "true"
 com.hooks.aws_ofi_nccl.variant = "cuda12"
 com.hooks.nvidia_cuda_mps.enabled = "true"
-com.pyxis.pytorch_remap_vars = "true"
-com.pyxis.entrypoint_log = "true"
 ```
 
 > Example EDF file of an ML application implemented with the transformers library that is able to leverage an HPC system using the Sarus-suite.
@@ -102,7 +100,6 @@ com.pyxis.entrypoint_log = "true"
 
 * **GitHub organization:** [https://github.com/sarus-suite](https://github.com/sarus-suite)
 * Open issues or discussions in the relevant repo.
-* PRs welcome—please see each repo’s README for build/test instructions.
 
 ---
 
