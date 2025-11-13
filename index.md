@@ -12,7 +12,6 @@ At its core is a **consistent user experience** driven by the **Environment Defi
 The components of the suite are interoperable and usable independently, and they plug cleanly into existing stacks (**Podman, conmon, crun, Slurm**, etc.).
 
 <div style="margin:1rem 0; display:flex; gap:.5rem; flex-wrap:wrap;">
-  <a class="btn" href="#get-started">Get started</a>
   <a class="btn" href="#components">Components</a>
   <a class="btn" href="#component-index">Component index</a>
   <a class="btn" href="#edf-example">EDF example</a>
