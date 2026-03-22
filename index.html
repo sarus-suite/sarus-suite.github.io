@@ -473,10 +473,49 @@
   <a href="#why-sarus-suite" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Why Sarus Suite?
+        Why Sarus Suite
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Why Sarus Suite">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-users" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        For users
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-administrators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        For administrators
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        For performance
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1094,26 +1133,21 @@
 <li><strong>Runtime host injection and hooks</strong> enable GPUs, MPI, libfabric and other system capabilities to be configured where HPC workloads actually need them.</li>
 <li><strong>Strong baseline performance</strong> keeps containers close to the expectations users already have for native HPC execution.</li>
 </ul>
-<h2 id="why-sarus-suite">Why Sarus Suite?<a class="headerlink" href="#why-sarus-suite" title="Permanent link">&para;</a></h2>
+<h2 id="why-sarus-suite">Why Sarus Suite<a class="headerlink" href="#why-sarus-suite" title="Permanent link">&para;</a></h2>
+<h3 id="for-users">For users<a class="headerlink" href="#for-users" title="Permanent link">&para;</a></h3>
 <ul>
-<li>
-<p><strong>EDF at the center.</strong> Describe your environment once; reuse it across clusters, jobs and projects without changing commands.</p>
-</li>
-<li>
-<p><strong>Same workflow, different clusters.</strong> EDF-driven UX hides site-specific details so you get a consistent experience on any system.</p>
-</li>
-<li>
-<p><strong>Cloud-native and HPC-native.</strong> Built on Podman and OCI runtimes, then extended with HPC hooks for Slurm, libfabric, GPUs, MPI and more.</p>
-</li>
-<li>
-<p><strong>Fast starts, full performance.</strong> Squashfs, overlay and HPC-tuned hooks give near-native I/O and network performance with container convenience.</p>
-</li>
-<li>
-<p><strong>Fits your existing stack.</strong> Integrates with Slurm, identity and policy infrastructure instead of replacing them.</p>
-</li>
-<li>
-<p><strong>Adopt what you need.</strong> Use EDF only, or add storage, performance and developer tools as needed — all components are modular and interoperable.</p>
-</li>
+<li><strong>Describe the runtime environment once with EDF.</strong> Define images, mounts, devices, environment variables and hooks in one place, then reuse that definition across jobs and projects.</li>
+<li><strong>Reuse workflows across clusters without rewriting launcher logic.</strong> EDF-driven workflows reduce cluster-specific differences so users can keep a more consistent experience across systems.</li>
+</ul>
+<h3 id="for-administrators">For administrators<a class="headerlink" href="#for-administrators" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Keep Slurm control, accounting, cgroups, and startup-cleanup container policy.</strong> Sarus Suite integrates with the scheduler model instead of bypassing it, so existing operational job controls remain in place.</li>
+<li><strong>Integrate with existing Podman, Slurm, and site infrastructure.</strong> The suite builds around standard OCI tooling and existing cluster services rather than replacing them with a custom system-specific runtime stack.</li>
+</ul>
+<h3 id="for-performance">For performance<a class="headerlink" href="#for-performance" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Shared SquashFS image access via Parallax.</strong> Large job launches can access the same image, making efficient use of parallel filesystem resources.</li>
+<li><strong>Runtime injection of GPUs, MPI/libfabric, NCCL, and host-tuned libraries.</strong> HPC-specific capabilities are added at runtime so containers can use optimized host resources while keeping the OCI engine standard.</li>
 </ul>
 <p>Sarus Suite provides an EDF-based user experience, Podman compatibility, faster container starts, vendor-grade performance and cleaner operations, with components you can deploy individually or as a full stack.</p>
 <h2 id="project-links">Project links<a class="headerlink" href="#project-links" title="Permanent link">&para;</a></h2>
