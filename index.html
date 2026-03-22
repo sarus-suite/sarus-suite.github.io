@@ -467,6 +467,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Proven at scale">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key results
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1131,8 +1148,38 @@
 <li><strong>Shared SquashFS image access</strong> reduces redundant image distribution and supports large synchronized launches.</li>
 <li><strong>Scheduler integration</strong> ensures containers fit existing Slurm-based workflows instead of bypassing them.</li>
 <li><strong>Runtime host injection and hooks</strong> enable GPUs, MPI, libfabric and other system capabilities to be configured where HPC workloads actually need them.</li>
-<li><strong>Strong baseline performance</strong> keeps containers close to the expectations users already have for native HPC execution.</li>
 </ul>
+<p>Validated on real HPC and AI workloads:</p>
+<ul>
+<li><strong>MPI CFD and SPH applications</strong>, benchmarked against MPICH and OpenMPI stacks</li>
+<li><strong>NCCL-based LLM training</strong>, using distributed Megatron-LM workloads</li>
+<li><strong>Metadata-heavy startup benchmarks</strong>, reflecting container launch behavior in production workflows</li>
+</ul>
+<h3 id="key-results">Key results<a class="headerlink" href="#key-results" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Comparable performance to SOTA Enroot+Pyxis</strong> on distributed HPC workloads</li>
+<li><strong>Comparable Megatron-LM throughput</strong> using an upstream NGC image</li>
+<li><strong>Faster per-node startup</strong> in warm-start production workflows</li>
+</ul>
+<div class="grid cards">
+<ul>
+<li>
+<p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 7v1.5h1V17h1.5V7zm4 0v9h1v1h7v-1h8V7zm11.5 2a2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5 2.5 2.5 0 0 1-2.5-2.5A2.5 2.5 0 0 1 17.5 9"/></svg></span> <strong>Up to 1024 GPUs tested</strong></p>
+<hr />
+<p>Evaluation included large-scale distributed AI runs across up to 1024 GPUs.</p>
+</li>
+<li>
+<p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 16a3 3 0 0 1-3-3c0-1.12.61-2.1 1.5-2.61l9.71-5.62-5.53 9.58c-.5.98-1.51 1.65-2.68 1.65m0-13c1.81 0 3.5.5 4.97 1.32l-2.1 1.21C14 5.19 13 5 12 5a8 8 0 0 0-8 8c0 2.21.89 4.21 2.34 5.65h.01c.39.39.39 1.02 0 1.41s-1.03.39-1.42.01A9.97 9.97 0 0 1 2 13 10 10 0 0 1 12 3m10 10c0 2.76-1.12 5.26-2.93 7.07-.39.38-1.02.38-1.41-.01a.996.996 0 0 1 0-1.41A7.95 7.95 0 0 0 20 13c0-1-.19-2-.54-2.9L20.67 8C21.5 9.5 22 11.18 22 13"/></svg></span> <strong>Up to 2.47× faster per-node startup</strong></p>
+<hr />
+<p>Warm-run startup measurements showed substantially faster per-node startup in production-style workflows.</p>
+</li>
+<li>
+<p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 17H7v-7h2zm4 0h-2V7h2zm4 0h-2v-4h2zm2 2H5V5h14v14.1M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2"/></svg></span> <strong>Comparable throughput</strong></p>
+<hr />
+<p>Distributed ML training and HPC application performance remained comparable to established production baselines.</p>
+</li>
+</ul>
+</div>
 <h2 id="why-sarus-suite">Why Sarus Suite<a class="headerlink" href="#why-sarus-suite" title="Permanent link">&para;</a></h2>
 <h3 id="for-users">For users<a class="headerlink" href="#for-users" title="Permanent link">&para;</a></h3>
 <ul>
