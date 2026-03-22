@@ -2,7 +2,7 @@
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
-    <meta name="google-site-verification" content="J4lJymK5D4EZ3udgVsOFieapT_x_-32ILYXmWDhDOnQ" />
+    
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="assets/Sarus_logo_figure_white.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.618322db.min.css">
+      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
       
         
         <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
@@ -437,10 +437,54 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#run-hpc-containers-at-scale-the-cloud-native-way" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Run HPC containers at scale - the cloud-native way
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-hpc-containers-need-a-different-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why HPC containers need a different architecture
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proven-at-scale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Proven at scale
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#why-sarus-suite" class="md-nav__link">
     <span class="md-ellipsis">
       
         Why Sarus Suite?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-links" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Project links
       
     </span>
   </a>
@@ -1003,38 +1047,53 @@
 
 
 <h1 id="sarus-suite">Sarus Suite<a class="headerlink" href="#sarus-suite" title="Permanent link">&para;</a></h1>
-<p>Sarus Suite is a modular, open-source toolkit built on top of <strong>Podman</strong> to run containers efficiently on <strong>HPC clusters</strong>. It aims to combine native HPC performance with the developer productivity of cloud-native tooling, reusing Podman’s fast-moving ecosystem and adding domain-specific HPC expertise. </p>
-<p>At the center of the suite is the <strong>Environment Definition File (EDF)</strong>. Users describe their environment once in an EDF, while the suite chooses the right runtimes, policies and configuration for each system. Administrators can tune cluster-specific behavior without forcing users to rewrite their container commands. </p>
-<p>All components are interoperable and can be adopted independently. They plug into existing stacks such as <strong>Podman</strong>, <strong>conmon</strong>, <strong>crun</strong> and <strong>Slurm</strong>, instead of replacing them. </p>
+<h2 id="run-hpc-containers-at-scale-the-cloud-native-way">Run HPC containers at scale - the cloud-native way<a class="headerlink" href="#run-hpc-containers-at-scale-the-cloud-native-way" title="Permanent link">&para;</a></h2>
+<p>Sarus Suite keeps standard Podman and adds HPC capabilities through scheduler integration, scalable image access, and runtime host injection.</p>
+<ul>
+<li><strong>Built on upstream Podman and OCI interfaces</strong></li>
+<li><strong>Scales to large synchronized launches with shared SquashFS image access</strong></li>
+<li><strong>Matches strong HPC baseline performance on real workloads</strong></li>
+</ul>
 <div class="grid cards">
 <ul>
 <li>
-<p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 16.5c0 .38-.21.71-.53.88l-7.9 4.44c-.16.12-.36.18-.57.18s-.41-.06-.57-.18l-7.9-4.44A.99.99 0 0 1 3 16.5v-9c0-.38.21-.71.53-.88l7.9-4.44c.16-.12.36-.18.57-.18s.41.06.57.18l7.9 4.44c.32.17.53.5.53.88zM12 4.15 6.04 7.5 12 10.85l5.96-3.35zM5 15.91l6 3.38v-6.71L5 9.21zm14 0v-6.7l-6 3.37v6.71z"/></svg></span> <strong>Component overview</strong></p>
+<p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 15.5h1.5V17H11zm1-8.55c2.7.11 3.87 2.83 2.28 4.86-.42.5-1.09.83-1.43 1.26-.35.43-.35.93-.35 1.43H11c0-.85 0-1.56.35-2.06.33-.5 1-.8 1.42-1.13 1.23-1.13.91-2.72-.77-2.85-.82 0-1.5.67-1.5 1.51H9c0-1.67 1.35-3.02 3-3.02M12 2c-.5 0-1 .19-1.41.59l-8 8c-.79.78-.79 2.04 0 2.82l8 8c.78.79 2.04.79 2.82 0l8-8c.79-.78.79-2.04 0-2.82l-8-8C13 2.19 12.5 2 12 2m0 2 8 8-8 8-8-8Z"/></svg></span> <strong>Why this approach</strong></p>
 <hr />
-<p>Explore cluster tools, transparent storage, performance extensions and developer tooling that make up the suite.</p>
-<p><a href="components/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> Component index</a></p>
+<p>See why HPC containers need a different architecture than standard single-node container workflows.</p>
+<p><a href="#why-hpc-containers-need-a-different-architecture"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> Why HPC containers need a different architecture</a></p>
 </li>
 <li>
-<p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg></span> <strong>Environment Definition File (EDF)</strong></p>
+<p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m16 11.78 4.24-7.33 1.73 1-5.23 9.05-6.51-3.75L5.46 19H22v2H2V3h2v14.54L9.5 8z"/></svg></span> <strong>Proven at scale</strong></p>
 <hr />
-<p>Learn how EDF describes images, mounts, devices, environment variables and annotations for hooks.</p>
-<p><a href="user/edf/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> EDF guide</a></p>
+<p>Understand how the suite handles synchronized launches, shared image access and strong baseline performance.</p>
+<p><a href="#proven-at-scale"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> Proven at scale</a></p>
 </li>
 <li>
-<p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 13H7v5h5v2H5V10h2v1h5zM8 4v2H4V4zm2-2H2v6h8zm10 9v2h-4v-2zm2-2h-8v6h8zm-2 9v2h-4v-2zm2-2h-8v6h8z"/></svg></span> <strong>Architecture</strong></p>
+<p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 13H7v5h5v2H5V10h2v1h5zM8 4v2H4V4zm2-2H2v6h8zm10 9v2h-4v-2zm2-2h-8v6h8zm-2 9v2h-4v-2zm2-2h-8v6h8z"/></svg></span> <strong>How it works</strong></p>
 <hr />
-<p>See how Sarus Suite components wrap Podman, Parallax and runtimes like <code>crun</code>.</p>
+<p>Explore how Sarus Suite combines Podman, Parallax, EDF and runtime hooks into an HPC-ready stack.</p>
 <p><a href="architecture/overview/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> High-level architecture</a></p>
 </li>
 <li>
-<p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"/></svg></span> <strong>Open Source</strong></p>
+<p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m13.13 22.19-1.63-3.83c1.57-.58 3.04-1.36 4.4-2.27zM5.64 12.5l-3.83-1.63 6.1-2.77C7 9.46 6.22 10.93 5.64 12.5M19.22 4c.28 0 .53 0 .74.05.17 1.39-.02 4.25-3.3 7.53-1.7 1.71-3.73 3.02-6.01 3.89l-2.15-2.1c.92-2.31 2.23-4.34 3.92-6.03C15.18 4.58 17.64 4 19.22 4m0-2c-1.98 0-4.98.69-8.22 3.93-2.19 2.19-3.5 4.6-4.35 6.71-.28.75-.09 1.57.46 2.13l2.13 2.12c.38.38.89.61 1.42.61.23 0 .47-.06.7-.15A19.1 19.1 0 0 0 18.07 13c5.66-5.66 3.54-10.61 3.54-10.61S20.7 2 19.22 2m-4.68 7.46c-.78-.78-.78-2.05 0-2.83s2.05-.78 2.83 0c.77.78.78 2.05 0 2.83s-2.05.78-2.83 0m-5.66 7.07-1.41-1.41zM6.24 22l3.64-3.64c-.34-.09-.67-.24-.97-.45L4.83 22zM2 22h1.41l4.77-4.76-1.42-1.41L2 20.59zm0-2.83 4.09-4.08c-.21-.3-.36-.62-.45-.97L2 17.76z"/></svg></span> <strong>Get started</strong></p>
 <hr />
-<p>Browse the repositories, open issues and discussions across all components.</p>
-<p><a href="https://github.com/sarus-suite"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> sarus-suite on GitHub</a></p>
-<p><a href="license/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> License</a></p>
+<p>Jump into installation and the quick start path for deploying the suite and running your first workloads.</p>
+<p><a href="admin/installation/#quick-start"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> Installation quick start</a></p>
 </li>
 </ul>
 </div>
+<h2 id="why-hpc-containers-need-a-different-architecture">Why HPC containers need a different architecture<a class="headerlink" href="#why-hpc-containers-need-a-different-architecture" title="Permanent link">&para;</a></h2>
+<p>Standard OCI runtimes like Podman are excellent at launching containers, but HPC environments impose additional requirements.</p>
+<p>Large HPC jobs often start many containers concurrently, across multiple nodes, for this the ideal is to use shared resources efficiently when loading the same image at scale. Moreover, clusters also need scheduler-aware placement, deployment startup and cleanup policy, GPU device setup, high-performance interconnect support and controlled host injection at runtime.</p>
+<p>Sarus Suite addresses those HPC-specific concerns without replacing the OCI engine. Instead, it keeps Podman and OCI interfaces intact, then adds the cluster-facing capabilities around them: EDF-driven configuration, scheduler integration, scalable image access and runtime hooks.</p>
+<h2 id="proven-at-scale">Proven at scale<a class="headerlink" href="#proven-at-scale" title="Permanent link">&para;</a></h2>
+<p>Sarus Suite is designed for the realities of HPC operations, where startup behavior and runtime integration matter as much as container compatibility.</p>
+<ul>
+<li><strong>Shared SquashFS image access</strong> reduces redundant image distribution and supports large synchronized launches.</li>
+<li><strong>Scheduler integration</strong> ensures containers fit existing Slurm-based workflows instead of bypassing them.</li>
+<li><strong>Runtime host injection and hooks</strong> enable GPUs, MPI, libfabric and other system capabilities to be configured where HPC workloads actually need them.</li>
+<li><strong>Strong baseline performance</strong> keeps containers close to the expectations users already have for native HPC execution.</li>
+</ul>
 <h2 id="why-sarus-suite">Why Sarus Suite?<a class="headerlink" href="#why-sarus-suite" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
@@ -1056,7 +1115,12 @@
 <p><strong>Adopt what you need.</strong> Use EDF only, or add storage, performance and developer tools as needed — all components are modular and interoperable.</p>
 </li>
 </ul>
-<p>Sarus Suite provides an EDF-based user experience, Podman compatibility, faster container starts, vendor-grade performance and cleaner operations, with components you can deploy individually or as a full stack. </p>
+<p>Sarus Suite provides an EDF-based user experience, Podman compatibility, faster container starts, vendor-grade performance and cleaner operations, with components you can deploy individually or as a full stack.</p>
+<h2 id="project-links">Project links<a class="headerlink" href="#project-links" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/sarus-suite"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 1C5.923 1 1 5.923 1 12c0 4.867 3.149 8.979 7.521 10.436.55.096.756-.233.756-.522 0-.262-.013-1.128-.013-2.049-2.764.509-3.479-.674-3.699-1.292-.124-.317-.66-1.293-1.127-1.554-.385-.207-.936-.715-.014-.729.866-.014 1.485.797 1.691 1.128.99 1.663 2.571 1.196 3.204.907.096-.715.385-1.196.701-1.471-2.448-.275-5.005-1.224-5.005-5.432 0-1.196.426-2.186 1.128-2.956-.111-.275-.496-1.402.11-2.915 0 0 .921-.288 3.024 1.128a10.2 10.2 0 0 1 2.75-.371c.936 0 1.871.123 2.75.371 2.104-1.43 3.025-1.128 3.025-1.128.605 1.513.221 2.64.111 2.915.701.77 1.127 1.747 1.127 2.956 0 4.222-2.571 5.157-5.019 5.432.399.344.743 1.004.743 2.035 0 1.471-.014 2.654-.014 3.025 0 .289.206.632.756.522C19.851 20.979 23 16.854 23 12c0-6.077-4.922-11-11-11"/></svg></span> sarus-suite on GitHub</a></li>
+<li><a href="license/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12.75 2.75V4.5h1.975c.351 0 .694.106.984.303l1.697 1.154q.063.042.14.043h4.102a.75.75 0 0 1 0 1.5H20.07l3.366 7.68a.75.75 0 0 1-.23.896q-.15.111-.31.206a6 6 0 0 1-.79.399 7.35 7.35 0 0 1-2.856.569 7.3 7.3 0 0 1-2.855-.568 6 6 0 0 1-.79-.4 3 3 0 0 1-.307-.202l-.005-.004a.75.75 0 0 1-.23-.896l3.368-7.68h-.886c-.351 0-.694-.106-.984-.303l-1.697-1.154a.25.25 0 0 0-.14-.043H12.75v14.5h4.487a.75.75 0 0 1 0 1.5H6.763a.75.75 0 0 1 0-1.5h4.487V6H9.275a.25.25 0 0 0-.14.043L7.439 7.197c-.29.197-.633.303-.984.303h-.886l3.368 7.68a.75.75 0 0 1-.209.878c-.08.065-.16.126-.31.223a6 6 0 0 1-.792.433 6.9 6.9 0 0 1-2.876.62 6.9 6.9 0 0 1-2.876-.62 6 6 0 0 1-.792-.433 4 4 0 0 1-.309-.221.76.76 0 0 1-.21-.88L3.93 7.5H2.353a.75.75 0 0 1 0-1.5h4.102q.076 0 .141-.043l1.695-1.154c.29-.198.634-.303.985-.303h1.974V2.75a.75.75 0 0 1 1.5 0M2.193 15.198a5.4 5.4 0 0 0 2.557.635 5.4 5.4 0 0 0 2.557-.635L4.75 9.368Zm14.51-.024q.123.06.275.126c.53.223 1.305.45 2.272.45a5.85 5.85 0 0 0 2.547-.576L19.25 9.367Z"/></svg></span> License</a></li>
+</ul>
 
 
 
@@ -1121,10 +1185,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.instant", "navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.copy", "content.code.annotate", "content.tabs.link", "search.suggest", "search.highlight"], "search": "assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.instant", "navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.copy", "content.code.annotate", "content.tabs.link", "search.suggest", "search.highlight"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.e71a0d61.min.js"></script>
+      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>
