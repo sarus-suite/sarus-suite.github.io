@@ -3,7 +3,7 @@ site_description: "Modular, EDF-driven tooling to run Podman containers efficien
 site_url: https://sarus-suite.github.io
 repo_url: https://github.com/sarus-suite
 repo_name: sarus-suite
-copyright: "© 2025 Sarus Suite contributors"
+copyright: "© 2026 Sarus Suite contributors"
 
 theme:
   name: material
