@@ -1,0 +1,7 @@
+
+/* Minimal tweaks for nice spacing and hero look */
+.md-typeset h1 { letter-spacing: -0.01em; }
+.grid.cards > ul { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (max-width: 800px) {
+  .grid.cards > ul { grid-template-columns: 1fr; }
+}

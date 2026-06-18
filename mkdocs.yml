@@ -1,0 +1,89 @@
+site_name: Sarus Suite
+site_description: "Modular, EDF-driven tooling to run Podman containers efficiently on HPC clusters."
+site_url: https://sarus-suite.github.io
+repo_url: https://github.com/sarus-suite
+repo_name: sarus-suite
+copyright: "© 2025 Sarus Suite contributors"
+
+theme:
+  name: material
+
+  # Use the Sarus logo
+  logo: assets/Sarus_logo_figure_white.png
+  favicon: assets/Sarus_logo_figure_white.png
+
+  language: en
+  icon:
+    repo: fontawesome/brands/github
+
+  palette:
+    - scheme: default
+      primary: red     # closest Material color to #E40227
+      accent: grey     # matches the logotype grey
+  font:
+    text: Inter
+    code: JetBrains Mono
+  features:
+    - navigation.instant
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - toc.integrate
+    - header.autohide
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+    - search.suggest
+    - search.highlight
+
+extra_css:
+  - styles/overrides.css
+
+plugins:
+  - search
+  - tags
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - pymdownx.details
+  - pymdownx.critic
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      linenums: false
+  - toc:
+      permalink: true
+
+nav:
+  - Home: index.md
+    #  - User:
+    #      - Quickstart: user/quickstart.md
+  - Components:
+      - Component index: components/index.md
+      - Cluster tools & dev experience: components/cli-tools.md
+      - Scheduler plugins: components/hpc-scheduler-plugins.md
+      - Storage & Podman integration: components/podman-integration.md
+  - Architecture:
+      - High-level architecture: architecture/overview.md
+      - Environment Definition File (EDF): user/edf.md
+  - Admin:
+      - Installation: admin/installation.md
+        #  - Tutorials:
+        #      - Run a Container on SLURM: tutorials/run-container-slurm.md
+        #      - Build & Run with Podman: tutorials/build-run-podman.md
+  - Developer:
+      - Contributing: developer/contributing.md
+  - License: license.md
+
