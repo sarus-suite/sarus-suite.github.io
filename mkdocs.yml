@@ -9,6 +9,7 @@ not_in_nav: |
 
 theme:
   name: material
+  language: en
   logo: assets/Sarus_logo_figure_white.png
   favicon: assets/Sarus_logo_figure_white.png
   icon:
@@ -44,13 +45,17 @@ plugins:
 markdown_extensions:
   - admonition
   - attr_list
+  - def_list
+  - footnotes
   - md_in_html
   - tables
   - toc:
       permalink: true
   - pymdownx.details
+  - pymdownx.critic
   - pymdownx.highlight:
       anchor_linenums: true
+      linenums: false
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
