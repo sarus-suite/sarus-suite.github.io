@@ -1,0 +1,4 @@
+# Contributing
+
+- GitHub organization: https://github.com/sarus-suite
+- Please open issues or discussions in the most relevant component repository.

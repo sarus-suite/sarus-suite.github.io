@@ -1,0 +1,73 @@
+site_name: Sarus Suite
+site_description: Modular, EDF-driven tooling to run Podman containers efficiently on HPC clusters.
+site_url: https://sarus-suite.github.io/
+repo_url: https://github.com/sarus-suite
+repo_name: sarus-suite
+
+theme:
+  name: material
+  logo: assets/Sarus_logo_figure_white.png
+  favicon: assets/Sarus_logo_figure_white.png
+  font:
+    text: Inter
+    code: JetBrains Mono
+  palette:
+    scheme: default
+    primary: red
+    accent: grey
+  features:
+    - navigation.instant
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - toc.integrate
+    - header.autohide
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+    - search.suggest
+    - search.highlight
+
+extra_css:
+  - styles/overrides.css
+
+plugins:
+  - search
+  - tags
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+nav:
+  - Home: index.md
+  - Components:
+      - Component index: components/index.md
+      - Cluster tools: components/cli-tools.md
+      - Scheduler plugins: components/hpc-scheduler-plugins.md
+      - Storage & Podman integration: components/podman-integration.md
+  - Architecture:
+      - High-level architecture: architecture/overview.md
+      - Environment Definition File (EDF): user/edf.md
+      - Quickstart: user/quickstart.md
+  - Admin:
+      - Installation: admin/installation.md
+  - Developer:
+      - Contributing: developer/contributing.md
+  - License: license.md
