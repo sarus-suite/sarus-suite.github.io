@@ -3,18 +3,23 @@ site_description: Modular, EDF-driven tooling to run Podman containers efficient
 site_url: https://sarus-suite.github.io/
 repo_url: https://github.com/sarus-suite
 repo_name: sarus-suite
+copyright: © 2025 Sarus Suite contributors
+not_in_nav: |
+  user/quickstart.md
 
 theme:
   name: material
   logo: assets/Sarus_logo_figure_white.png
   favicon: assets/Sarus_logo_figure_white.png
+  icon:
+    repo: fontawesome/brands/github
   font:
     text: Inter
     code: JetBrains Mono
   palette:
-    scheme: default
-    primary: red
-    accent: grey
+    - scheme: default
+      primary: red
+      accent: grey
   features:
     - navigation.instant
     - navigation.tabs
@@ -59,13 +64,12 @@ nav:
   - Home: index.md
   - Components:
       - Component index: components/index.md
-      - Cluster tools: components/cli-tools.md
+      - Cluster tools & dev experience: components/cli-tools.md
       - Scheduler plugins: components/hpc-scheduler-plugins.md
       - Storage & Podman integration: components/podman-integration.md
   - Architecture:
       - High-level architecture: architecture/overview.md
       - Environment Definition File (EDF): user/edf.md
-      - Quickstart: user/quickstart.md
   - Admin:
       - Installation: admin/installation.md
   - Developer:

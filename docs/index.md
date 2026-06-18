@@ -4,6 +4,7 @@ tags:
   - Containers
   - Podman
   - OCI
+title: Sarus Suite
 ---
 
 # Sarus Suite
@@ -18,37 +19,37 @@ Sarus Suite keeps standard Podman and adds HPC capabilities through scheduler in
 
 <div class="grid cards" markdown>
 
-- :material-help-rhombus:{ .lg .middle } **Why this approach**
+- :material-help-rhombus-outline:{ .lg .middle } **Why this approach**
 
     ---
 
     See why HPC containers need a different architecture than standard single-node container workflows.
 
-    [:material-arrow-right: Why HPC containers need a different architecture](#why-hpc-containers-need-a-different-architecture)
+    [:octicons-arrow-right-24: Why HPC containers need a different architecture](#why-hpc-containers-need-a-different-architecture)
 
-- :material-chart-line-variant:{ .lg .middle } **Proven at scale**
+- :material-chart-line:{ .lg .middle } **Proven at scale**
 
     ---
 
     Understand how the suite handles synchronized launches, shared image access and strong baseline performance.
 
-    [:material-arrow-right: Proven at scale](#proven-at-scale)
+    [:octicons-arrow-right-24: Proven at scale](#proven-at-scale)
 
-- :material-sitemap:{ .lg .middle } **How it works**
+- :material-file-tree-outline:{ .lg .middle } **How it works**
 
     ---
 
     Explore how Sarus Suite combines Podman, Parallax, EDF and runtime hooks into an HPC-ready stack.
 
-    [:material-arrow-right: High-level architecture](architecture/overview.md)
+    [:octicons-arrow-right-24: High-level architecture](architecture/overview.md)
 
-- :material-rocket-launch:{ .lg .middle } **Get started**
+- :material-rocket-launch-outline:{ .lg .middle } **Get started**
 
     ---
 
     Jump into installation and the quick start path for deploying the suite and running your first workloads.
 
-    [:material-arrow-right: Installation quick start](admin/installation.md#quick-start)
+    [:octicons-arrow-right-24: Installation quick start](admin/installation.md#quick-start)
 
 </div>
 
@@ -82,19 +83,19 @@ Validated on real HPC and AI workloads:
 
 <div class="grid cards" markdown>
 
-- :material-gpu:{ .lg .middle } **Up to 1024 GPUs tested**
+- :material-expansion-card:{ .lg .middle } **Up to 1024 GPUs tested**
 
     ---
 
     Evaluation included large-scale distributed AI runs across up to 1024 GPUs.
 
-- :material-speedometer:{ .lg .middle } **Up to 2.47x faster per-node startup**
+- :material-speedometer:{ .lg .middle } **Up to 2.47× faster per-node startup**
 
     ---
 
     Warm-run startup measurements showed substantially faster per-node startup in production-style workflows.
 
-- :material-chart-box:{ .lg .middle } **Comparable throughput**
+- :material-chart-box-outline:{ .lg .middle } **Comparable throughput**
 
     ---
 
@@ -123,5 +124,5 @@ Sarus Suite provides an EDF-based user experience, Podman compatibility, faster 
 
 ## Project links
 
-- [:simple-github: sarus-suite on GitHub](https://github.com/sarus-suite)
-- [:material-scale-balance: License](license.md)
+- [:octicons-mark-github-24: sarus-suite on GitHub](https://github.com/sarus-suite)
+- [:octicons-law-24: License](license.md)

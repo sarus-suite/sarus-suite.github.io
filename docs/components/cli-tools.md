@@ -22,5 +22,5 @@ The **podman-driver** crate provides a Rust API that executes Podman and Paralla
 
 Two components help with development and CI:
 
-- **deploy** - reproducible dev-to-prod environments and fast onboarding.
-- **containerfiles-ci** - canonical build/test images with pinned dependencies, making CI behavior reproducible and easier to debug.
+- **deploy** – reproducible dev-to-prod environments and fast onboarding.
+- **containerfiles-ci** – canonical build/test images with pinned dependencies, making CI behavior reproducible and easier to debug.

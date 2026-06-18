@@ -22,4 +22,4 @@ Follow these steps to use Sarus Suite on your HPC cluster.
         qsub -l select=1:ncpus=4 -l walltime=00:10:00 -- sarus-run podman run hello-world
         ```
 
-3. **Validate output** - You should see container output in the job logs.
+3. **Validate output** — You should see container output in the job logs.
