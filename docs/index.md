@@ -56,6 +56,14 @@ Sarus Suite keeps standard Podman and adds HPC capabilities through scheduler in
 
     [:octicons-arrow-right-24: Try Sarus Suite locally](user/getting-started-local.md)
 
+- :material-server-network:{ .lg .middle } **For administrators**
+
+    ---
+
+    Understand the site installation model: runtime dependencies, Sarus binaries, Podman configuration, Parallax image storage and deployment packaging.
+
+    [:octicons-arrow-right-24: Installation guide](admin/installation.md)
+
 </div>
 
 ## Why HPC containers need a different architecture
@@ -119,6 +127,11 @@ Validated on real HPC and AI workloads:
 
 - **Keep Slurm control, accounting, cgroups, and startup-cleanup container policy.** Sarus Suite integrates with the scheduler model instead of bypassing it, so existing operational job controls remain in place.
 - **Integrate with existing Podman, Slurm, and site infrastructure.** The suite builds around standard OCI tooling and existing cluster services rather than replacing them with a custom system-specific runtime stack.
+
+!!! info "Installing on a cluster?"
+    Start with the manual installation guide to understand the stack layout, then use Deploy where openSUSE Leap 15.5 packaging fits your site.
+
+    [Read the installation guide](admin/installation.md)
 
 ### For performance
 
