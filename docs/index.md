@@ -17,6 +17,11 @@ Sarus Suite keeps standard Podman and adds HPC capabilities through scheduler in
 - **Scales to large synchronized launches with shared SquashFS image access**
 - **Matches strong HPC baseline performance on real workloads**
 
+!!! tip "Try the CLI locally"
+    Download the portable bundle, enter the Sarus Suite shell, inspect an EDF, and run a container locally without setting up Slurm or Skybox.
+
+    [Get started locally](user/getting-started-local.md)
+
 <div class="grid cards" markdown>
 
 - :material-help-rhombus-outline:{ .lg .middle } **Why this approach**
@@ -47,9 +52,9 @@ Sarus Suite keeps standard Podman and adds HPC capabilities through scheduler in
 
     ---
 
-    Jump into installation and the quick start path for deploying the suite and running your first workloads.
+    Download the portable bundle, enter the Sarus Suite shell, inspect an EDF and run a container locally.
 
-    [:octicons-arrow-right-24: Installation quick start](admin/installation.md#quick-start)
+    [:octicons-arrow-right-24: Try Sarus Suite locally](user/getting-started-local.md)
 
 </div>
 

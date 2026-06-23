@@ -67,6 +67,7 @@ markdown_extensions:
 
 nav:
   - Home: index.md
+  - Get started: user/getting-started-local.md
   - Components:
       - Component index: components/index.md
       - Cluster tools & dev experience: components/cli-tools.md
