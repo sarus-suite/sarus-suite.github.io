@@ -2,6 +2,18 @@
   "name": "Sarus Suite Docs",
   "image": "mcr.microsoft.com/devcontainers/python:1-3.12-bookworm",
   "postCreateCommand": "pip install --user -r requirements.txt",
+  "runArgs": [
+    "-p",
+    "8000:8000"
+  ],
+  "forwardPorts": [
+    8000
+  ],
+  "portsAttributes": {
+    "8000": {
+      "label": "MkDocs preview"
+    }
+  },
   "customizations": {
     "vscode": {
       "extensions": [
