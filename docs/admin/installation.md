@@ -34,7 +34,7 @@ Sites that first want to validate only the CLI and EDF workflow can start with `
 
 ### 3. Render site configuration
 
-Use the bundle configuration templates as a reference, replacing the `@@SARUS_SUITE_*@@` placeholders with the chosen system paths:
+Use the [`sarus-suite/sarus-suite`](https://github.com/sarus-suite/sarus-suite) bundle configuration templates as a reference, replacing the `@@SARUS_SUITE_*@@` placeholders with the chosen system paths:
 
 - `runtime/etc/containers/containers.conf`
 - `runtime/etc/containers/storage.conf`
