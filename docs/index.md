@@ -133,6 +133,12 @@ Validated on real HPC and AI workloads:
 
     [Read the installation guide](admin/installation.md)
 
+### For performance
+
+- **Shared SquashFS image access via Parallax.** Large job launches can access the same image, making efficient use of parallel filesystem resources.
+- **Runtime injection of GPUs, MPI/libfabric, NCCL, and host-tuned libraries.** HPC-specific capabilities are added at runtime so containers can use optimized host resources while keeping the OCI engine standard.
+
+Sarus Suite provides an EDF-based user experience, Podman compatibility, faster container starts, vendor-grade performance and cleaner operations, with components you can deploy individually or as a full stack.
 
 ## Why EDF?
 
@@ -212,13 +218,6 @@ EDF does not require every workload detail to be identical across systems. Paths
 
 [:octicons-arrow-right-24: Learn more about EDF](user/edf)
 
-
-### For performance
-
-- **Shared SquashFS image access via Parallax.** Large job launches can access the same image, making efficient use of parallel filesystem resources.
-- **Runtime injection of GPUs, MPI/libfabric, NCCL, and host-tuned libraries.** HPC-specific capabilities are added at runtime so containers can use optimized host resources while keeping the OCI engine standard.
-
-Sarus Suite provides an EDF-based user experience, Podman compatibility, faster container starts, vendor-grade performance and cleaner operations, with components you can deploy individually or as a full stack.
 
 ## Project links
 
