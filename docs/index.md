@@ -133,6 +133,86 @@ Validated on real HPC and AI workloads:
 
     [Read the installation guide](admin/installation.md)
 
+
+## Why EDF?
+
+Running an HPC container involves more than selecting an image. Users may need to coordinate runtime settings, storage configuration, mounts, devices, environment variables, and cluster-specific hooks—often through a long collection of command-line options.
+
+A typical container launch can look like this:
+
+```bash
+podman \
+  --ipc host \
+  --network host \
+  --pid host \
+  --uts host \
+  --userns keep-id \
+  --cgroupns host \
+  --cgroups no-conmon \
+  --tz local \
+  --root "$PODMAN_ROOT" \
+  --runroot "$PODMAN_RUNROOT" \
+  --storage-opt "additionalimagestore=$RO_STORAGE" \
+  --storage-opt "mount_program=/usr/bin/parallax-mount-program" \
+  run \
+  --mount "type=bind,src=/scratch/$USER/hf-models,dst=/opt/hf" \
+  --mount "type=bind,src=/scratch/$USER/data,dst=/data" \
+  --mount "type=bind,src=/scratch/$USER/output,dst=/output" \
+  --workdir "/scratch/$USER" \
+  --entrypoint "" \
+  --device "nvidia.com/gpu=all" \
+  --env "HUGGINGFACE_HUB_CACHE=/opt/hf/hub" \
+  --env "TRANSFORMERS_CACHE=/opt/hf/transformers" \
+  --annotation "com.hooks.cxi.enabled=true" \
+  --annotation "com.hooks.aws_ofi_nccl.enabled=true" \
+  --annotation "com.hooks.aws_ofi_nccl.variant=cuda12" \
+  --annotation "com.hooks.nvidia_cuda_mps.enabled=true" \
+  ghcr.io/cscs/ml-workflows/transformers:latest-arm64 \
+  /usr/bin/myapp
+```
+
+HPC users must assemble these options correctly for each deployment. Missing or incorrect settings can cause the container to fail, prevent access to required resources, or result in reduced performance.
+
+An Environment Definition File, or EDF, provides a declarative boundary between the workload a user wants to run and the site-specific mechanisms used to execute it. Instead of exposing the complete runtime command, Sarus Suite translates the environment description into the appropriate Podman, storage, and runtime configuration for the deployment.
+
+The same environment can be described with EDF as follows:
+
+```toml
+image = "ghcr.io/cscs/ml-workflows/transformers:latest-arm64"
+
+mounts = [
+  "/scratch/$USER/hf-models:/opt/hf",
+  "/scratch/$USER/data:/data",
+  "/scratch/$USER/output:/output"
+]
+
+workdir = "/scratch/$USER"
+entrypoint = false
+
+devices = ["nvidia.com/gpu=all"]
+
+[env]
+HUGGINGFACE_HUB_CACHE = "/opt/hf/hub"
+TRANSFORMERS_CACHE = "/opt/hf/transformers"
+
+[annotations]
+com.hooks.cxi.enabled = "true"
+com.hooks.aws_ofi_nccl.enabled = "true"
+com.hooks.aws_ofi_nccl.variant = "cuda12"
+com.hooks.nvidia_cuda_mps.enabled = "true"
+```
+
+The application can then be launched through the SLURM scheduler with a concise command:
+
+```bash
+srun --edf transformers /usr/bin/myapp
+```
+
+EDF does not require every workload detail to be identical across systems. Paths, devices, and runtime extensions reflect the target environment. Its purpose is to separate the environment being requested from the lower-level command details and configuration used to realize it.
+
+[:octicons-arrow-right-24: Learn more about EDF](user/edf)
+
+
 ### For performance
 
 - **Shared SquashFS image access via Parallax.** Large job launches can access the same image, making efficient use of parallel filesystem resources.
